@@ -6,8 +6,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls', namespace='pages')),
     path('casks/', include('casks.urls', namespace='casks')),
-    # path('users/', include('users.urls', namespace='users')),
-    # path('recipes/', include('recipes.urls', namespace='recipes')),
+    path('users/', include('users.urls', namespace='users')),
+    path('recipes/', include('recipes.urls', namespace='recipes')),
 ]
 
 handler404 = 'pages.views.page_not_found'

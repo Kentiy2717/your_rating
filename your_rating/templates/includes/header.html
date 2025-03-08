@@ -10,10 +10,31 @@
       {% with request.resolver_match.view_name as view_name %}
         <ul class="nav  nav-pills">
           <li class="nav-item">
+            <a class="nav-link {% if view_name == 'users:index' %} text-white {% endif %}" href="{% url 'users:index' %}">
+              Моя страница
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'recipes:index' %} text-white {% endif %}" href="{% url 'recipes:index' %}">
+              Рецепты
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link {% if view_name == 'casks:index' %} text-white {% endif %}" href="{% url 'casks:index' %}">
               Бочки
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'casks:index' %} text-white {% endif %}" href="{% url 'casks:index' %}">
+              Готовые напитки
+            </a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if view_name == 'casks:index' %} text-white {% endif %}" href="{% url 'casks:index' %}">
+            Рейтинг
+          </a>
+        </li>
           <li class="nav-item">
             <a class="nav-link {% if view_name == 'pages:about' %} text-white {% endif %}" href="{% url 'pages:about' %}">
               О проекте
