@@ -5,7 +5,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls', namespace='pages')),
-    # path('casks/', include('casks.urls', namespace='casks')),
+    path('casks/', include('casks.urls', namespace='casks')),
     # path('users/', include('users.urls', namespace='users')),
     # path('recipes/', include('recipes.urls', namespace='recipes')),
 ]
