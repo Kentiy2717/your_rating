@@ -17,6 +17,8 @@ INSTALLED_APPS = [
     'casks.apps.CasksConfig',
     'recipes.apps.RecipesConfig',
     'users.apps.UsersConfig',
+    'drinks.apps.DrinksConfig',
+    'rating.apps.RatingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

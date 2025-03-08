@@ -8,6 +8,8 @@ urlpatterns = [
     path('casks/', include('casks.urls', namespace='casks')),
     path('users/', include('users.urls', namespace='users')),
     path('recipes/', include('recipes.urls', namespace='recipes')),
+    path('drinks/', include('drinks.urls', namespace='drinks')),
+    path('rating/', include('rating.urls', namespace='rating')),
 ]
 
 handler404 = 'pages.views.page_not_found'
