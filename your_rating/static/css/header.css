@@ -1,0 +1,21 @@
+/* static/css/header.css */
+.site-header {
+    background-color: #ebd89b;
+  }
+  
+  .brand-link {
+    color: #224747;
+  }
+  
+  .text-custom {
+    color: #224747;
+  }
+  
+  .text-custom:hover {
+    color: #ffffff !important;
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #224747 !important;
+    color: #ebd89b !important;
+  }
