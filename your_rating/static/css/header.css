@@ -1,5 +1,6 @@
-/* static/css/header.css */
 .site-header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
     background-color: #ebd89b;
   }
   
