@@ -1,9 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
   Главная страница
 {% endblock %}
 {% block content %}
-
-<p>1) Первая итерация сайта;</p> 
-<p>2) Созданы основные приложения;</p> 
+<img src="{% static 'logo.png' %}" width="600" height="600" class="d-inline-block align-top" alt="">
+<img src="{% static 'logo.png' %}" width="600" height="600" class="d-inline-block align-top" alt="">
 {% endblock %}
