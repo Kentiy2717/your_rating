@@ -1,8 +1,201 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
-  Моя страница
+  Бочки
 {% endblock %}
 {% block content %}
+<div class="row">
+  <!-- Левая колонка с изображением -->
+  <div class="col-12 col-md-5 mb-4 mb-md-0">
+    <img src="{% static 'users/user1.jfif' %}" 
+         class="img-fluid rounded"
+         alt="Фото профиля">
+  </div>
 
-<h1>ТУТ БУДЕТ МОЯ СТРАНИЦА</h1> 
+  <!-- Правая колонка -->
+  <div class="col-12 col-md-7">
+    <!-- Блок характеристик -->
+    <div class="row">
+      <div class="col-12 col-sm-12">
+        <dl class="mb-0">
+          <dd class="mb-2"><strong>Иннокентий(@kentiy2717)</strong></dd>
+          <dd class="mb-2"><strong>г. Томск:</strong></dd>
+          <dd class="mb-2"><strong>Мой рейтинг ⭐85(73)</strong></dd>
+          <dd class="mb-0"><strong>6815 подписчиков</strong></dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- О себе -->
+    <div class="row mt-3 mt-md-2">
+      <div class="col-12">
+        <h5 class="h6 h5-md">О себе:</h5>
+        <div class="comment-section bg-light p-2 p-md-3 rounded">
+          <p class="mb-2 text-break">
+            Занимаюсь винокурением с 2020 года. В основном злаками.
+            Солод, зерно по белой и красной схеме. 
+            Виски, бурбон, биршнапс, белые зерновые и солодовые дистилляты.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Нарады -->
+    <div class="row mt-3 mt-md-2">
+      <div class="col-12">
+        <h5 class="h6 h5-md">Мои медали:</h5>
+        <div class="comment-section bg-light p-2 p-md-3 rounded">
+          <ul class="mb-0">
+            <li class="mb-2">
+              <strong>⭐ Золотая медаль в номинации "Виски" ("Знак качества" 2022г.)</strong>
+            </li>
+            <li class="mb-2">
+              <strong>⭐ Бронзовая медаль в номинации "Невыдержанные диситлляты" ("Знак качества" 2022г.)</strong>
+            </li>
+            <li class="mb-2">
+              <strong>⭐ Золотая медаль "Биршнапс выдержанный" ("Лига мастеров" 2023г.)</strong>
+            </li>
+            <li class="mb-2">
+              <strong>⭐ Серебряная медаль в номинации "Виски" ("Знак качества" 2023г.)</strong>
+            </li>
+            <li class="mb-2">
+              <strong>⭐ Золотая медаль "Виски" ("ЛенГранСтакан" 2022г.)</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-5 mb-4 mb-md-0">
+    <!-- Мои рецепты -->
+    <div class="col-12">
+      <h5 class="h6 h5-md">Мои рецепты:</h5>
+      <div class="comment-section bg-light p-2 p-md-3 rounded">
+        <ul class="mb-0">
+          <li class="mb-2">
+            <a href="">Бурбон мультизлаковый</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Виски односолодовый</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Ячменный дистиллят тройной перегонки по красной схеме</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Ржаной дистиллят двойной кубовой перегонки</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Ректификат сахарный</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Мои рецепты -->
+    <div class="col-12">
+      <h5 class="h6 h5-md">Мои бочки:</h5>
+      <div class="comment-section bg-light p-2 p-md-3 rounded">
+        <ul class="mb-0">
+          <li class="mb-2">
+            <a href="{% url 'casks:index' %}">Бочка 55л Американский дуб (Старый русский дуб)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Бочка 225л Американский дуб (Старый русский дуб)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Бочка 225л Французский дуб (Старый русский дуб)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Бочка 55л Кавказский дуб (Старый русский дуб)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Бочка 225л Кавказский дуб (Старый русский дуб)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Бочка 110л Испанский дуб (от Геннадия)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Мое оборудование -->
+    <div class="col-12">
+      <h5 class="h6 h5-md">Мое оборудование:</h5>
+      <div class="comment-section bg-light p-2 p-md-3 rounded">
+        <ul class="mb-0">
+          <li class="mb-2">
+            <a href="">ПВК(НордСтим)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Куб 70л(МЗБО)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Куб 50л(МЗБО)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Шлем(НордСтим)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Конус(НордСтим)</a>
+          </li>
+          <li class="mb-2">
+            <a href="">Шея(НордСтим)</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Правая колонка -->
+  <div class="col-12 col-md-6">
+    <div class="row">
+
+      
+      <!--Пост 1 -->
+      <div class="row mt-3 mt-md-4">
+        <div class="col-12">
+          <h5 class="h6 h5-md">Как я делаю виски в 2023 году.</h5>
+          <div class="comment-section bg-light p-2 p-md-3 rounded">
+            <p class="mb-2 text-break">
+              Охапка дров - вискарь готов! 
+              <a href="">Начинается все с солода...</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <!--Пост 2 -->
+      <div class="row mt-3 mt-md-4">
+        <div class="col-12">
+          <h5 class="h6 h5-md">Тройная дистилляция это просто и вкусно!</h5>
+          <div class="comment-section bg-light p-2 p-md-3 rounded">
+            <p class="mb-2 text-break">
+              Этой методики научил меня 
+              <a href="">Евгений</a>.
+              Очень вкусно выходит! <a href="">Всем ре...</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <!--Пост 3 -->
+      <div class="row mt-3 mt-md-4">
+        <div class="col-12">
+          <h5 class="h6 h5-md">Обзор автоматики SSV версия 2.</h5>
+          <div class="comment-section bg-light p-2 p-md-3 rounded">
+            <p class="mb-2 text-break">
+              С первой версией я познакомился в далеком 2020 году.
+              С 2022 года работаю на второй версии.
+              В чем же преимущества второй версии? Сейчас расскажу!
+              Во-первых, добавили барометр, <a href="">которы...</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
