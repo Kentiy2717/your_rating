@@ -1,7 +1,99 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}
   Бочки
 {% endblock %}
 {% block content %}
-<h1>ТУТ БУДУТ БОЧКИ</h1> 
+<div class="row">
+  <!-- Левая колонка с изображением -->
+  <div class="col-6">
+    <img src="{% static 'casks/cask1.jpg' %}" 
+         width="600" 
+         class="d-inline-block align-top" 
+         alt="Фото бочки">
+  </div>
+
+  <!-- Правая колонка (6 колонок) -->
+  <div class="col-6">
+    <!-- Блок со списками характеристик -->
+    <div class="row">  <!-- Внутренний ряд для характеристик -->
+      <div class="col-5">
+        <dl>
+          <dd><strong>Производитель:</strong></dd>
+          <dd><strong>Объем:</strong></dd>
+          <dd><strong>Вид дуба:</strong></dd>
+          <dd><strong>Начало эксплуатации:</strong></dd>
+          <dd><strong>Владельцы:</strong></dd>
+        </dl>
+      </div>
+      <div class="col-7">  <!-- Увеличил до 9 для правильного выравнивания -->
+        <dl>
+          <dd>"Старый Русский Дуб"</dd>
+          <dd>55л</dd>
+          <dd>Кавказский скальный дуб</dd>
+          <dd>07.07.2023г.</dd>
+          <dd>@kentiy2717, @zzkisazz</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- Блок комментариев под списками -->
+    <div class="row mt-4">  <!-- Отступ сверху -->
+      <div class="col-12">
+        <h5>Комментарии владельцев</h5>
+        <div class="comment-section bg-light p-3 rounded">
+          <p class="mb-2">
+            <strong>@kentiy2717:</strong> 
+            Отличная бочка. Вымачивал водой неделю и сразу залил вискарый NewMake 63%. Через 3 года получил хороший виски! Продал по причине маленького объема. Перешел на 200+л.</p>
+          <p class="mb-2"><strong>@zzkisazz:</strong> Только получила бочку. Аромат отменный. Очень красивая!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- Таблица с историей -->
+<div class="row mt-4">
+  <div class="col-12">
+    <h5 class="mb-3">История эксплуатации</h5>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-light">
+          <tr>
+            <th class="col-1">Дата залива</th>
+            <th class="col-1">Дата слива</th>
+            <th class="col-2">Выдержка</th>
+            <th class="col-2">Вид напитка</th>
+            <th class="col-4">Дегустационные заметки</th>
+            <th class="col-1">Автор</th>
+            <th class="col-1">Рейтинг</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Первая запись -->
+          <tr>
+            <td>07.07.2023</td>
+            <td>10.08.2026</td>
+            <td>3года 1 месяц 3 дня</td>
+            <td>Солодовый виски</td>
+            <td>Яркие ноты ванили, оттенок дубовой пряности, долгое послевкусие</td>
+            <td>@kentiy2717</td>
+            <td>⭐ 85(73)</td>
+          </tr>
+          
+          <!-- Вторая запись -->
+          <tr>
+            <td>25.08.2026</td>
+            <td>14.02.2027</td>
+            <td>173 дня</td>
+            <td>Бурбон</td>
+            <td>Аромат карамели и копчёного дуба, плотная текстура, средняя сладость</td>
+            <td>@kentiy2717</td>
+            <td>⭐ 99(88)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
 {% endblock %}

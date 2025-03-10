@@ -1,8 +1,13 @@
 .site-header {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 900;
-    background-color: #ebd89b;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 900;
+  background-color: #ebd89b;
+}
   
   .brand-link {
     color: #224747;
@@ -20,3 +25,8 @@
     background-color: #224747 !important;
     color: #ebd89b !important;
   }
+
+/* Отступ для основного контента */
+main {
+  margin-top: 40px; /* Высота header + отступ */
+}
