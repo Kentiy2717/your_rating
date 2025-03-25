@@ -13,12 +13,6 @@ ALLOWED_HOSTS = [
 ]
 
 INSTALLED_APPS = [
-    'pages.apps.PagesConfig',
-    'casks.apps.CasksConfig',
-    'recipes.apps.RecipesConfig',
-    'users.apps.UsersConfig',
-    'drinks.apps.DrinksConfig',
-    'rating.apps.RatingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -26,6 +20,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_bootstrap5',
+    'pages.apps.PagesConfig',
+    'casks.apps.CasksConfig',
+    'recipes.apps.RecipesConfig',
+    'users.apps.UsersConfig',
+    'drinks.apps.DrinksConfig',
+    'rating.apps.RatingConfig',
     # 'debug_toolbar',
 ]
 
@@ -101,6 +101,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # INTERNAL_IPS = [
 #     '127.0.0.1',
 # ]
@@ -111,8 +114,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 
 # LOGIN_URL = 'login'
 
-MEDIA_ROOT = BASE_DIR / 'media'
-
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # 
 # EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+
+AUTH_USER_MODEL = 'users.User'
